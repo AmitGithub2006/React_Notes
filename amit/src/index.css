@@ -1,0 +1,84 @@
+/* ===================== CSS for "Insta.jsx" starts here ===================== */
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.insta {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding: 10px;
+  width: 320px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+#profile_img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+}
+
+#profile_pic {
+  height: 440px;
+  width: 300px;
+  display: block;
+  margin: 10px 0;
+  border-radius: 2px;
+}
+
+.dots {
+  margin-left: 160px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.like {
+  color: red;
+}
+
+.comment {
+  margin: 0 10px;
+  color: white;
+}
+
+.quote {
+  display: flex;
+  align-items: baseline;
+  margin: 5px 0;
+}
+
+#user {
+  margin-right: 5px;
+}
+
+/* ===================== CSS for "Insta.jsx" ends here ===================== */
+
+/* ==================== CSS for "FormProject.jsx" starts here ======================= */
+
+.container {
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ==================== CSS for "FormProject.jsx" ends here ======================= */
