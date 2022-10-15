@@ -20,8 +20,6 @@ export class Parent extends React.Component {
             parentText: "parent changed by child"
         })
     }
-
-
     render() {
         return (
             <>

@@ -1,5 +1,7 @@
 // stateless functional component
 
+import React from 'react';
+
 export function Functional (props) {
     return (
         <>

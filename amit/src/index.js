@@ -21,11 +21,12 @@ import { StateWithObject } from './components/StateWithObject';
 import { StateWithArray } from './components/StateWithArray';
 import { TitleChangeClass } from './components/TitleChangeClass';
 import { TitleChangeHooks } from "./components/TitleChangeHooks"
+import { Check } from './components/Check';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
+  <>
+  <App />
     {/* <Main /> */}
     {/* <Parent /> */}
     {/* <Child /> */}
@@ -33,7 +34,7 @@ root.render(
     {/* <EvenOdd /> */}
     {/* <Names /> */}
     {/* <Insta /> */}
-    <LifeCycle />
+    {/* <LifeCycle /> */}
     {/* <Functional name={["amit", "ketan", "vasanth"]}/> */}
     {/* <Form /> */}
     {/* <Button /> */}
@@ -44,7 +45,7 @@ root.render(
     {/* <StateWithArray /> */}
     {/* <TitleChangeClass /> */}
     {/* <TitleChangeHooks /> */}
-  </React.StrictMode>
+  </>
 );
 
 

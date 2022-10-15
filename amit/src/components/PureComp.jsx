@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-// optimsation of react components
+// optimisation of react components
 
 // shouldComponentUpdate -> validate current props and newly coming props
 // if both are same, returns false
