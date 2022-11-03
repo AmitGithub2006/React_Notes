@@ -1,41 +1,11 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-// As "axios" file is exporting default in node_modules -> axios -> node_modules -> index.d.ts then there is no need to put it in {} like { axios } in above line.
-
-// Api fetch on button click
-export function DataFetch() {
-  const [posts, setPosts] = useState([]);
-  const [id, setId] = useState(1);
-
-  useEffect(() => {
-    axios
-      .get(`https://jsonplaceholder.typicode.com/posts/${id}`)
-      .then((response) => {
-        console.log(response.data);
-        setPosts(response.data);
-      })
-      .catch((err) => console.log(err));
-  }, [id]);
-
-  return (
-    <div>
-      <h1>{posts.title}</h1>
-      <p>{posts.body}</p>
-      <button onClick={() => setId((prev) => prev+1)}>click - {id}</button>
-    </div>
-  );
-}
-
-// ===================================================================================================
-
 // import React, { useState, useEffect } from "react";
 // import axios from "axios";
+// // As "axios" file is exporting default in node_modules -> axios -> node_modules -> index.d.ts then there is no need to put it in {} like { axios } in above line.
 
-// // Api fetch on entering id and button click.
+// // Api fetch on button click
 // export function DataFetch() {
 //   const [posts, setPosts] = useState([]);
 //   const [id, setId] = useState(1);
-//   const [btnId, setBtnId] = useState(1);
 
 //   useEffect(() => {
 //     axios
@@ -45,17 +15,47 @@ export function DataFetch() {
 //         setPosts(response.data);
 //       })
 //       .catch((err) => console.log(err));
-//   }, [btnId]);
+//   }, [id]);
 
 //   return (
 //     <div>
 //       <h1>{posts.title}</h1>
 //       <p>{posts.body}</p>
-//       <input type="text" value={id} onChange={(e) => setId(e.target.value)} />
-//       <button onClick={() => setBtnId(id)}>click</button>
+//       <button onClick={() => setId((prev) => prev+1)}>click - {id}</button>
 //     </div>
 //   );
 // }
+
+// ===================================================================================================
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+// Api fetch on entering id and button click.
+export function DataFetch() {
+  const [posts, setPosts] = useState([]);
+  const [id, setId] = useState(1);
+  const [btnId, setBtnId] = useState(1);
+
+  useEffect(() => {
+    axios
+      .get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      .then((response) => {
+        console.log(response.data);
+        setPosts(response.data);
+      })
+      .catch((err) => console.log(err));
+  }, [btnId]);
+
+  return (
+    <div>
+      <h1>{posts.title}</h1>
+      <p>{posts.body}</p>
+      <input type="text" value={id} onChange={(e) => setId(e.target.value)} />
+      <button onClick={() => setBtnId(id)}>click</button>
+    </div>
+  );
+}
 
 // ==========================================================================================
 
